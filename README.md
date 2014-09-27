@@ -16,6 +16,7 @@ Compojure+Liberator on the server.
 * Bootstrap 3.2.0
 * cljs-http
 * sablono
+* figwheel + lein figwheel
 
 ## Usage
 
@@ -29,12 +30,14 @@ In one terminal:
 
 ````
 cd example
-lein cljsbuild auto
+lein figwheel
 ````
 
 Changes to Clojurescript (.cljs) code will automatically be compiled
-when files change. You will need to refresh the browser to see the
-changes.
+when files change. Figwheel takes care of reloading changes the
+browser. Also see
+[this](blog.michielborkent.nl/blog/2014/09/25/figwheel-keep-Om-turning/)
+blog post.
 
 In another terminal:
 
