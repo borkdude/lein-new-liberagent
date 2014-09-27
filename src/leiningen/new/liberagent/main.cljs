@@ -4,7 +4,8 @@
     [reagent.core :as reagent :refer [atom]]
     [sablono.core :as html :refer-macros [html]]
     [cljs-http.client :as http]
-    [cljs.core.async :refer (<!)]))
+    [cljs.core.async :refer (<!)]
+    [figwheel.client :as fw]))
 
 (enable-console-print!)
 
@@ -20,3 +21,9 @@
 
 (reagent/render-component [screen]
                           (js/document.getElementById "app"))
+
+(fw/watch-and-reload
+ :websocket-url   "ws://localhost:3449/figwheel-ws"
+ :jsload-callback
+ (fn []
+   (println "reloaded")))

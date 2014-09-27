@@ -13,9 +13,11 @@
                  [liberator "0.12.2"]
                  [fogus/ring-edn "0.2.0"]
                  [reagent "0.4.2"]
-                 [sablono "0.2.22"]]
+                 [sablono "0.2.22"]
+                 [figwheel "0.1.4-SNAPSHOT"]]
   :plugins [[lein-ring "0.8.11"]
-            [lein-cljsbuild "1.0.4-SNAPSHOT"]]
+            [lein-cljsbuild "1.0.4-SNAPSHOT"]
+            [lein-figwheel "0.1.4-SNAPSHOT"]]
   :source-paths ["src"]
   :cljsbuild {
               :builds [{:id "{{name}}"
