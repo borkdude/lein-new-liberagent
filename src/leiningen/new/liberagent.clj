@@ -8,7 +8,6 @@
   (let [data {:name name
               :ns-name (sanitize-ns name)
               :sanitized (name-to-path name)}]
-(println "sanitized" (:sanitized data))
     (->files data
 ["src/{{sanitized}}/api.clj" (render "api.clj" data)]
 ["src-cljs/{{sanitized}}/main.cljs" (render "main.cljs" data)]
