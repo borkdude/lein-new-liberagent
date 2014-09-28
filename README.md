@@ -17,7 +17,8 @@ Compojure+Liberator on the server.
 * cljs-http
 * reagent
 * sablono
-* figwheel + lein figwheel
+* figwheel + lein figwheel (live javascript reloading)
+* weasel + piggieback (clojurescript REPL)
 
 ## Usage
 
@@ -29,10 +30,18 @@ lein new liberagent example
 
 In one terminal:
 
-````
+```
+$ cd example
+$ lein repl
+example.api=> (brepl) ;; starts browser repl
+```
+
+In a second terminal:
+
+```
 cd example
 lein figwheel
-````
+```
 
 Changes to Clojurescript (.cljs) code will automatically be compiled
 when files change. Figwheel takes care of reloading changes the
@@ -40,18 +49,34 @@ browser. Also see
 [this](blog.michielborkent.nl/blog/2014/09/25/figwheel-keep-Om-turning/)
 blog post.
 
-In another terminal:
+In a third terminal:
 
-````
+```
 cd example
 lein ring server
-````
+```
 
 A browser window will automatically open. If not, go to
 http://localhost:8090/index.html.
 
 Changes to Clojure (.clj) code will automatically be compiled upon
 browser request.
+
+In the browser repl type for example:
+
+```
+(.click (js/$ "#myButton"))
+```
+
+You are now controlling the client from a REPL!
+
+## Start project without figwheel and weasel:
+
+Use normal `lein cljsbuild` +
+
+```
+IS_DEV=false lein ring server
+```
 
 ## License
 
