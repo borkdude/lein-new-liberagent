@@ -78,6 +78,11 @@ Use normal `lein cljsbuild` +
 IS_DEV=false lein ring server
 ```
 
+## Credits
+
+This template is inspired by the
+[Chestnut](https://github.com/plexus/chestnut) template.
+
 ## License
 
 Copyright Michiel Borkent
