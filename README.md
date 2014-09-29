@@ -46,7 +46,7 @@ lein figwheel
 Changes to Clojurescript (.cljs) code will automatically be compiled
 when files change. Figwheel takes care of reloading changes the
 browser. Also see
-[this](blog.michielborkent.nl/blog/2014/09/25/figwheel-keep-Om-turning/)
+[this](http://blog.michielborkent.nl/blog/2014/09/25/figwheel-keep-Om-turning/)
 blog post.
 
 In a third terminal:
