@@ -13,7 +13,7 @@
                  [liberator "0.12.2"]
                  [fogus/ring-edn "0.2.0"]
                  [reagent "0.4.2"]
-                 [figwheel "0.1.4-SNAPSHOT"]
+                 [figwheel "0.1.5-SNAPSHOT"]
                  [com.cemerick/piggieback "0.1.3"]
                  [weasel "0.4.2"]
                  [environ "1.0.0"]]
