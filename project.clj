@@ -1,4 +1,4 @@
-(defproject liberagent/lein-template "0.1.5"
+(defproject liberagent/lein-template "0.1.6-SNAPSHOT"
   :description "Created with lein-create-template"
   :url "http://example.com/FIXME"
   :license {:name "Eclipse Public License"
